@@ -1,0 +1,44 @@
+{
+  "name": "real-estate-investment-game",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "run-s lint:*",
+    "lint:biome": "biome check src/",
+    "lint:tsc": "tsc --noEmit",
+    "fix": "run-s fix:*",
+    "fix:biome": "biome check --fix src/",
+    "test": "vitest",
+    "test:run": "vitest --run",
+    "test:ui": "vitest --ui",
+    "postinstall": "lefthook install"
+  },
+  "dependencies": {
+    "@linaria/react": "^6.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@biomejs/biome": "^2.4.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-swc": "^3.10.1",
+    "@vitest/ui": "^3.2.2",
+    "@wyw-in-js/vite": "^0.6.0",
+    "jsdom": "^26.1.0",
+    "lefthook": "^2.1.1",
+    "npm-run-all2": "^8.0.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.2"
+  }
+}

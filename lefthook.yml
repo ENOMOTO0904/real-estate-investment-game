@@ -1,0 +1,16 @@
+pre-commit:
+  commands:
+    biome:
+      glob: '**/*.{jsx,tsx,js,ts,cjs,html,json}'
+      run: npx biome format --write {staged_files} && git add {staged_files}
+
+pre-push:
+  parallel: true
+  commands:
+    biome-lint:
+      glob: '**/*.{jsx,tsx,js,ts,cjs,html,json}'
+      run: npx biome lint {push_files}
+    typecheck:
+      run: npx tsc --noEmit
+    test:
+      run: npx vitest --run
